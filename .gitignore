@@ -16,6 +16,8 @@
 /node_modules
 /gems
 /app/assets/javascripts/bundle.js
+/app/test
+
 
 # Ignore Byebug command history file.
 .byebug_history

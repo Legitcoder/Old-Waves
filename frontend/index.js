@@ -9,14 +9,12 @@ import App from './components/app';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-
-
 var Routes = (
-    // <Provider store={createStoreWithMiddleware(reducers)}>
+     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history={browserHistory}>
       <Route path="/" component={App} />
       </Router>
-    // </Provider>
+     </Provider>
   );
 
 
