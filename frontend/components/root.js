@@ -22,6 +22,7 @@ const Root = () => {
       replace('/login')
     }
   };
+
   return(
    <Provider store={store}>
     <Router history={browserHistory}>

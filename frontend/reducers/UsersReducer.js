@@ -13,7 +13,7 @@ export default( state = INITIAL_STATE, action) => {
     case AUTHORIZE_USER_LOGIN:
       return Object.assign({}, state, {currentUser: action.payload});
     case UNAUTHORIZED_LOGIN_ERROR:
-      return Object.assign({}, state, {errorMessage: 'Invalid Credentials'});
+      return Object.assign({}, state, {errorMessage: 'Invalid Username/Password'});
     default:
       return state;
   }
