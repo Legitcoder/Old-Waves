@@ -1,4 +1,4 @@
-import {browserHistory} from 'react-router'
+import {hashHistory} from 'react-router'
 import axios from 'axios';
 import {
   AUTHORIZE_USER_LOGIN,
@@ -9,7 +9,7 @@ export const authorizeUserLogin = (props) => dispatch => {
   axios.post('/api/sessions', props)
   .then(currentUser => {
     dispatch({ type: AUTHORIZE_USER_LOGIN, payload: currentUser.data})
-    browserHistory.push('/');
+    hashHistory.push('/');
   })
   .catch(error =>{
     dispatch({type: UNAUTHORIZED_LOGIN_ERROR, payload: error})

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { authorizeUserLogin } from '../../actions/index';
-import {bindActionCreators} from 'redux';
-import {browserHistory} from 'react-router';
+import SignUp from './signup';
 
 
 class Login extends Component {
@@ -11,6 +9,7 @@ class Login extends Component {
     super(props);
 
     this.state = {
+      displaySignupForm: false,
       username: "",
       password: ""
     }
@@ -18,9 +17,10 @@ class Login extends Component {
 
   handleSubmit(event){
     event.preventDefault();
+    const {username, password} = this.refs;
     this.setState({
-      username: this.refs.username.value,
-      password: this.refs.password.value
+      username: username.value,
+      password: password.value
     }, () => this.props.authorizeUserLogin(this.state)
   );
   }
@@ -35,10 +35,18 @@ class Login extends Component {
     }
   }
 
+  renderSignUpForm(){
+    $('.sign-up-button').hide();
+    if(this.state.displaySignupForm){
+      return <SignUp />;
+    }
+  }
+
 
 
     render(){
       return(
+        <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
 
         <fieldset className="form-group">
@@ -50,9 +58,16 @@ class Login extends Component {
             <label>Password</label>
             <input ref="password" className="form-control" type="password" name="password" placeholder="Enter Password" />
           </fieldset>
+
           {this.renderAlert()}
+
           <button type="submit" className="btn btn-primary">Log In</button>
         </form>
+        <form onSubmit={() => this.setState({displaySignupForm: true})}>
+        <button type="submit" className="btn btn-primary sign-up-button">Sign Up</button>
+        </form>
+        {this.renderSignUpForm()}
+        </div>
       );
     }
 }

@@ -4,11 +4,12 @@ import { Provider, connect  } from 'react-redux';
 import ReduxPromise from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
-import {Router, browserHistory, Route, IndexRoute, Link} from 'react-router';
+import {Router, hashHistory, Route, IndexRoute, Link} from 'react-router';
 import reducers  from '../reducers';
 import App from './app';
 import Login from './auth/login';
-import {authorizeUserLogin} from '../actions/index';
+import Albums from './main/albums';
+import Artists from './main/artists';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, ReduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -17,17 +18,18 @@ const store = createStoreWithMiddleware(reducers);
 const Root = () => {
 
   const requireAuth = (nextState, replace) => {
-    console.log(store.getState());
-    if(!store.getState().users.currentUser){
-      replace('/login')
-    }
+    !store.getState().users.currentUser ? replace('/login') : replace('/artists');
   };
 
   return(
    <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path="/" component={App} onEnter={requireAuth} />
-      <Route path="/login" component={Login} />
+    <Router history={hashHistory}>
+      <Route path="/" >
+        <IndexRoute component={App} onEnter={requireAuth} />
+        <Route path="/artists" component={Artists} />
+        <Route path="/albums" component={Albums} />
+        <Route path="/login" component={Login} />
+      </Route>
     </Router>
     </Provider>
 );
