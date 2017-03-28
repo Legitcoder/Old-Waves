@@ -1,12 +1,13 @@
 class User < ApplicationRecord
 
+  has_secure_password
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :username, :email, :password_digest, :session_token, presence: true
+  has_attached_file :image, styles: { medium: "300x300>" }, default_url: "missingdefault.jpeg"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+  validates :firstName, :lastName, :username, :email, :session_token, presence: true
   validates :username, :email, uniqueness: true
   validates :email, format: {with: VALID_EMAIL_REGEX}
-
-
-  has_secure_password
 
   after_initialize :reset_session_token
   before_validation :ensure_session_token_uniqueness

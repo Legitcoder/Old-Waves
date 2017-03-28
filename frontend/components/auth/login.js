@@ -36,13 +36,11 @@ class Login extends Component {
   }
 
   renderSignUpForm(){
-    $('.sign-up-button').hide();
     if(this.state.displaySignupForm){
+      $('.sign-up-button').hide();
       return <SignUp />;
     }
   }
-
-
 
     render(){
       return(
@@ -63,9 +61,7 @@ class Login extends Component {
 
           <button type="submit" className="btn btn-primary">Log In</button>
         </form>
-        <form onSubmit={() => this.setState({displaySignupForm: true})}>
-        <button type="submit" className="btn btn-primary sign-up-button">Sign Up</button>
-        </form>
+        <button type="submit" onClick={() => this.setState({displaySignupForm: true})} className=" sign-up-button btn btn-primary">Register</button>
         {this.renderSignUpForm()}
         </div>
       );

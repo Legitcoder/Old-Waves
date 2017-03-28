@@ -15,3 +15,14 @@ export const authorizeUserLogin = (props) => dispatch => {
     dispatch({type: UNAUTHORIZED_LOGIN_ERROR, payload: error})
   })
 }
+
+export const createNewUser = (props) => dispatch => {
+  axios.post('/api/users', props)
+  .then(currentUser => {
+    dispatch({ type: AUTHORIZE_USER_LOGIN, payload: currentUser.data})
+    hashHistory.push('/');
+  })
+  // .catch(error =>{
+  //   dispatch({type: UNAUTHORIZED_LOGIN_ERROR, payload: error})
+  // })
+}
