@@ -1,5 +1,5 @@
 class Song < ApplicationRecord
-  belongs_to :album  
+  belongs_to :album
   has_attached_file :audio
   validates_attachment_content_type :audio,
   :content_type => ['audio/mpeg',
@@ -11,4 +11,5 @@ class Song < ApplicationRecord
                      'audio/mpg',
                      'audio/x-mpg',
                      'audio/x-mpegaudio']
+  validates_attachment_size :audio, less_than: 10.megabyte
 end
