@@ -1,5 +1,6 @@
 class Album < ApplicationRecord
   validates :title, :artist, presence: true
+  belongs_to :artist
   has_many :songs
   has_attached_file :image, styles: { medium: "300x300>" },
                         default_url: "missingalbumart.jpeg"
