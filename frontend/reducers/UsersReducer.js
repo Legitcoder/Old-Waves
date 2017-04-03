@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import {
   AUTHORIZE_USER_LOGIN,
   UNAUTHORIZED_LOGIN_ERROR
