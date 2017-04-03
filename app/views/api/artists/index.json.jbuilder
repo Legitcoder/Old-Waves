@@ -1,3 +1,1 @@
-@artists.each do |artist|
-  json.partial! artist
-end
+json.array! @artists, :id, :name, :image
