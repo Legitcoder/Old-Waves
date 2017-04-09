@@ -6,7 +6,6 @@ import { fetchArtists } from '../../actions/index';
 class Artists extends Component{
   componentDidMount(){
     this.props.fetchArtists();
-
   }
     render(){
       if(!this.props.artists){
@@ -29,7 +28,6 @@ class Artists extends Component{
 
 
 const mapStateToProps = (state) =>{
-  //console.log(state.artists.all)
   return {artists: state.artists.all}
 }
 

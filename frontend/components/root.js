@@ -10,6 +10,7 @@ import App from './app';
 import Login from './auth/login';
 import Albums from './main/albums';
 import Artists from './main/artists';
+import ArtistAlbums from './main/artistAlbums';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, ReduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -26,9 +27,10 @@ const Root = () => {
     <Router history={hashHistory}>
       <Route path="/" >
         <IndexRoute component={App} onEnter={requireAuth} />
-        <Route path="/artists" component={Artists} />
-        <Route path="/albums" component={Albums} />
-        <Route path="/login" component={Login} />
+        <Route path="/Artists" component={Artists} />
+        <Route path="/ArtistAlbums" component={ArtistAlbums} />
+        <Route path="/Albums" component={Albums} />
+        <Route path="/Login" component={Login} />
       </Route>
     </Router>
     </Provider>

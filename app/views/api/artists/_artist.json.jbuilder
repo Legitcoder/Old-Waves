@@ -1,4 +1,3 @@
 json.(artist, :id, :name)
-json.image do |json|
-  json.(artist.image, :url)
-end
+json.image { |json| json.(artist.image, :url)}
+json.albums artist.albums, :id, :title, :year, :image, :small_url
