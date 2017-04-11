@@ -6,14 +6,21 @@ import ReduxThunk from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import {Router, hashHistory, Route, IndexRoute, Link} from 'react-router';
 import reducers  from '../reducers';
+import { loadState, saveState } from './localStorage';
 import App from './app';
 import Login from './auth/login';
 import Albums from './main/albums';
 import Artists from './main/artists';
 import ArtistAlbums from './main/artistAlbums';
 
+
+const persistedState = loadState();
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, ReduxThunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStoreWithMiddleware(reducers, persistedState);
+
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 
 const Root = () => {

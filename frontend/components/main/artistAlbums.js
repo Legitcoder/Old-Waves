@@ -4,18 +4,13 @@ import Album from './album';
 import {fetchArtist} from '../../actions/index';
 
 class ArtistAlbums extends Component{
-
-  componentDidUpdate(){
-    this.props.fetchArtist(this.props.artist);
-  }
-
   render(){
     if(!this.props.artist){
       return <div>Loading</div>;
     }
     else{
       return(
-        <ul className="albums">
+        <ul>
         {
             this.props.artist.albums.map(album =>{
               return(<Album album={album} key={album.id} />);

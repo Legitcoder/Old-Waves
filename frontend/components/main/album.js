@@ -7,12 +7,10 @@ import {connect} from 'react-redux';
 
   render(){
     return(
-      <div>
-        <li>
-          <h3>{this.props.album.title}</h3>
+        <li className="albums">
+          <h4>{this.props.album.title}</h4>
           <img src={this.props.album.small_url}></img>
         </li>
-      </div>
     );
   }
 }
