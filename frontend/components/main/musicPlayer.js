@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 class MusicPlayer extends Component{
 
   componentWillUpdate(){
-    debugger
     var currentSong = document.getElementById('current');
     setTimeout(function () {
       currentSong.play();
@@ -28,8 +27,6 @@ class MusicPlayer extends Component{
         else{
         return (
           <div>
-          <h3>{this.props.song.title}</h3>
-          <h3>{this.props.song.audio}</h3>
           <audio controls id="current" src={this.props.song.audio} />
           </div>
         );

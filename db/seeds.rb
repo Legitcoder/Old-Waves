@@ -135,7 +135,7 @@ image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 worldIsLost = Song.create(
 title: "World is Lost",
 album: forProfessionalUseOnly,
-audio: "https://s3.amazonaws.com/tidal-clone-dev/15+Y.N.R.E.mp3",
+audio: "https://s3.amazonaws.com/tidal-clone-dev/18+World+Is+Lost.mp3",
 image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 
 
