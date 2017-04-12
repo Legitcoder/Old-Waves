@@ -39,7 +39,7 @@ const Root = () => {
         <Route path="/artists/:id/:artist" component={ArtistAlbums} />
         <Route path="/artists/:id/:artist/:album" component={AlbumSongs} />
         <Route path="/albums" component={Albums} />
-        <Route path="/Login" component={Login} />
+        <Route path="/login" component={Login} />
       </Route>
     </Router>
     </Provider>
