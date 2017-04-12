@@ -33,9 +33,9 @@ const Root = () => {
   return(
    <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" >
-        <IndexRoute component={App} onEnter={requireAuth} />
-        <Route path="/artists" component={Artists} />
+      <Route path="/" component={App}>
+        <IndexRoute component={Artists} />
+        <Route path="/artists" component={Artists} onEnter={requireAuth} />
         <Route path="/artists/:id/:artist" component={ArtistAlbums} />
         <Route path="/artists/:id/:artist/:album" component={AlbumSongs} />
         <Route path="/albums" component={Albums} />

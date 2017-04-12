@@ -7,18 +7,8 @@ import Song from './song';
 
  class AlbumSongs extends Component{
 
-  // routeToArtistAlbums(){
-  //   const {artist} = this.props;
-  //   this.props.fetchArtist(artist)
-  //   hashHistory.push(`artists/${artist.id}/${artist.name}`);
-  // }
-
   render(){
     const {album} = this.props;
-    if(!album){
-      return <div><h3>Loading</h3></div>;
-    }
-    else{
       return(
         <ul>
         {
@@ -28,7 +18,7 @@ import Song from './song';
         }
         </ul>
         );
-      }
+
     }
 }
 

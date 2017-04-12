@@ -8,10 +8,6 @@ class Artists extends Component{
     this.props.fetchArtists();
   }
     render(){
-      if(!this.props.artists){
-        return <div>Loading</div>;
-      }
-      else{
         return(
           <ul>
           {
@@ -21,7 +17,6 @@ class Artists extends Component{
           }
           </ul>
           );
-        }
       }
   }
 
