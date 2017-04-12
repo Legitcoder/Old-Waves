@@ -45,5 +45,9 @@ export const fetchArtist = (artist) => dispatch => {
 }
 
 export const selectAlbum = (album) => dispatch => {
-    dispatch({ type: SELECT_ALBUM, payload: album})
+  console.log(album);
+  axios.get(`/api/albums/${album.id}`)
+  .then(album => {
+    dispatch({ type: SELECT_ALBUM, payload: album.data})
+  })
 }
