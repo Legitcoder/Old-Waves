@@ -7,7 +7,7 @@ class Album < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates_attachment_size :image, less_than: 2.megabyte
 
-  def small_url
+  def small_image
     self.image.url(:small)
   end
 end

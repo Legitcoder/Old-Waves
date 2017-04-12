@@ -17,17 +17,22 @@
 body{
   background-color: #404040;
 }
-
+h3, h4 {
+  color: white;
+}
 ul {
-  margin: 0;
-  padding: 0;
+  margin-left: 10px;
   list-style-type: none;
   text-align: center;
   display: inline-block;
  }
 
-
 .albums{
+  display: inline-block;
+  margin: 20px;
+}
+
+.artists{
   display: inline-block;
   margin: 20px;
 }

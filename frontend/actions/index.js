@@ -4,11 +4,11 @@ import {
   AUTHORIZE_USER_LOGIN,
   UNAUTHORIZED_LOGIN_ERROR,
   FETCH_ARTISTS,
-  FETCH_ARTIST
+  FETCH_ARTIST,
+  SELECT_ALBUM
 } from './types'
 
 export const authorizeUserLogin = (props) => dispatch => {
-  console.log(props);
   axios.post('/api/sessions', props)
   .then(currentUser => {
     dispatch({ type: AUTHORIZE_USER_LOGIN, payload: currentUser.data})
@@ -42,4 +42,8 @@ export const fetchArtist = (artist) => dispatch => {
   .then(albums => {
     dispatch({ type: FETCH_ARTIST, payload: albums.data})
   })
+}
+
+export const selectAlbum = (album) => dispatch => {
+    dispatch({ type: SELECT_ALBUM, payload: album})
 }

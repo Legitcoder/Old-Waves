@@ -8,16 +8,18 @@ import {fetchArtist} from '../../actions/index'
  class Artist extends Component{
 
   routeToArtistAlbums(){
-    this.props.fetchArtist(this.props.artist)
-    hashHistory.push('/ArtistAlbums');
+    const {artist} = this.props;
+    this.props.fetchArtist(artist)
+    hashHistory.push(`artists/${artist.id}/${artist.name}`);
   }
 
   render(){
+    const {artist} = this.props;
     return(
       <div>
-        <li>
-          <h3>{this.props.artist.name}</h3>
-          <img src={this.props.artist.image} onClick={this.routeToArtistAlbums.bind(this)}></img>
+        <li className="artists">
+          <h3>{artist.name}</h3>
+          <img src={artist.image} onClick={this.routeToArtistAlbums.bind(this)}></img>
         </li>
       </div>
     );
