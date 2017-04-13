@@ -17,16 +17,22 @@ class Song < ApplicationRecord
                      'audio/x-mpegaudio']
   validates_attachment_size :audio, less_than: 10.megabyte
 
+  def length
+    seconds = self.duration
+    minutes = (seconds/60).floor
+    sec = (seconds % 60).floor
+    sec < 10 ? sec = "0#{sec}" : sec
+    "#{minutes}:#{sec}"
+  end
 
 private
 
-# Retrieves metadata for MP3s
-def extract_metadata
-  path = audio.queued_for_write[:original].path
-  open_opts = { :encoding => 'utf-8' }
-  Mp3Info.open(path, open_opts) do |mp3info|
-    self.duration = mp3info.length.to_i
+  def extract_metadata
+    path = audio.queued_for_write[:original].path
+    open_opts = { :encoding => 'utf-8' }
+    Mp3Info.open(path, open_opts) do |mp3info|
+      self.duration = mp3info.length.to_i
+    end
   end
-end
 
 end

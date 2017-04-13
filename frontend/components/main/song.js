@@ -12,20 +12,11 @@ class Song extends Component{
     !song.paused && !song.ended ? song.pause() : song.play();
   }
 
-  secondsToDuration(seconds){
-    var minutes = Math.floor(seconds/60);
-    var sec = Math.floor(seconds % 60);
-    sec < 10 ? sec=`0${sec}` : sec;
-    return `${minutes}:${sec}`;
-  }
-
-
-
   render(){
     const {song} = this.props;
     return(
         <li className="songs">
-          <h4 onClick={this.playPause.bind(this)}>{song.title} {this.secondsToDuration(song.duration)}</h4>
+          <h4 onClick={this.playPause.bind(this)}>{song.title} {song.length}</h4>
         </li>
     );
   }
