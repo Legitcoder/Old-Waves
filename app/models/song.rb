@@ -2,7 +2,6 @@ class Song < ApplicationRecord
   belongs_to :album
   has_attached_file :audio
   before_save :extract_metadata
-  serialize :metadata
   has_attached_file :image
   has_attached_file :image, styles: { medium: "300x300>" },
                         default_url: "missingalbumart.jpeg"
@@ -26,7 +25,7 @@ def extract_metadata
   path = audio.queued_for_write[:original].path
   open_opts = { :encoding => 'utf-8' }
   Mp3Info.open(path, open_opts) do |mp3info|
-    self.duration = mp3info.tag
+    self.duration = mp3info.length.to_i
   end
 end
 

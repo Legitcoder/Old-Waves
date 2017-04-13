@@ -13,23 +13,22 @@ class Song extends Component{
     !song.paused && !song.ended ? song.pause() : song.play();
   }
 
-  readableDuration(seconds) {
-    var sec = Math.floor( seconds );
-    var min = Math.floor( sec / 60 );
-    min = min >= 10 ? min : '0' + min;
-    sec = Math.floor( sec % 60 );
-    sec = sec >= 10 ? sec : '0' + sec;
-    return min + ':' + sec;
+  secondsToDuration(seconds){
+    var minutes = Math.floor(seconds/60);
+    var sec = Math.floor(seconds % 60);
+    sec < 10 ? sec*=10 : sec;
+    return `${minutes}:${sec}`;
   }
 
+
+
   render(){
-    var songDuration = document.getElementById('song').duration;
+
     const {song} = this.props;
     return(
         <li className="songs">
           <h4 onClick={this.playPause.bind(this)}>{song.title}</h4>
-          <h4>{this.readableDuration(songDuration)}</h4>
-           <audio id="song"><source src={song.audio} /></audio>
+          <h4>{this.secondsToDuration(song.duration)}</h4>
         </li>
     );
   }
