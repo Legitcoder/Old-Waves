@@ -14,25 +14,98 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-body{
-  background-color: #404040;
+html, body {
+  background-color: #373737;
+  color: #999;
 }
-h3, h4 {
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+audio {
+  position: fixed;
+  bottom: 0;
+  width: 75%;
+}
+
+h3, h4, h5 {
   color: white;
 }
+
 ul {
-  margin-left: 10px;
+  margin-left: 5px;
   list-style-type: none;
   text-align: center;
   display: inline-block;
  }
 
 .albums{
+  cursor: pointer;
   display: inline-block;
   margin: 20px;
 }
 
+.songs{
+  cursor: default;
+}
+
+.song-list{
+  display: block;
+}
+
 .artists{
+  cursor: pointer;
   display: inline-block;
   margin: 20px;
+}
+
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper{
+  margin-left: -250px;
+  left: 250px;
+  width: 175px;
+  background: #CCCCCC;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 175px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+      padding-left: 0;
+    }
+    #sidebar-wrapper {
+      left: 0;
+    }
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
 }

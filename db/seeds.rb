@@ -23,6 +23,18 @@ year: 2011,
 artist: araabmuzik,
 image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
 goldenTouch = Song.create(
 title: "Golden Touch",
 album: electronicDream,
@@ -80,7 +92,7 @@ image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 beauty = Song.create(
 title: "Beauty",
 album: forProfessionalUseOnly,
-audio: "https://s3.amazonaws.com/tidal-clone-dev/07+Runway+Bass.mp3",
+audio: "https://s3.amazonaws.com/tidal-clone-dev/09+Beauty.mp3",
 image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 
 streetKnock = Song.create(

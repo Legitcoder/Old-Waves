@@ -10,7 +10,7 @@ import Song from './song';
   render(){
     const {album} = this.props;
       return(
-        <ul>
+        <ul className="song-list">
         {
             album.songs.map(song =>{
               return(<Song song={song} key={song.id} />);

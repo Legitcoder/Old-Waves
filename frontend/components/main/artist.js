@@ -18,8 +18,8 @@ import {fetchArtist} from '../../actions/index'
     return(
       <div>
         <li className="artists">
-          <h3>{artist.name}</h3>
-          <img src={artist.image} onClick={this.routeToArtistAlbums.bind(this)}></img>
+          <img src={artist.small_image} onClick={this.routeToArtistAlbums.bind(this)}></img>
+          <h4>{artist.name}</h4>
         </li>
       </div>
     );

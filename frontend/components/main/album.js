@@ -17,8 +17,8 @@ class Album extends Component{
     const {album} = this.props;
     return(
         <li className="albums">
-          <h4>{album.title}</h4>
           <img src={album.small_image} onClick={this.routeToAlbumSongs.bind(this)}></img>
+          <h5>{album.title}</h5>
         </li>
     );
   }

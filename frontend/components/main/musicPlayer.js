@@ -10,16 +10,6 @@ class MusicPlayer extends Component{
     }, 100);
   }
 
-
-  // changeCurrentSong(event){
-  //   debugger;
-  //   var currentSong = document.getElementById('current');
-  //   currentSong.play();
-  //   // document.getElementById('src').src = this.props.song.audio;
-  //   // document.getElementById('ad').load();
-  //
-  // }
-
   render(){
         if(!this.props.song){
           return <div><h3>Loading</h3></div>;
@@ -27,7 +17,7 @@ class MusicPlayer extends Component{
         else{
         return (
           <div>
-          <audio controls id="current" src={this.props.song.audio} />
+            <audio controls id="current" src={this.props.song.audio} />
           </div>
         );
         }
