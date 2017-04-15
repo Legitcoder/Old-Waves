@@ -35,6 +35,36 @@ year: 2011,
 artist: araabmuzik,
 image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
 goldenTouch = Song.create(
 title: "Golden Touch",
 album: electronicDream,

@@ -18,3 +18,5 @@ export const saveState = (state) => {
     console.log("An error occured saving state to local storage");
   }
 }
+
+export const clearLocalStorage = () => localStorage.removeItem('state');

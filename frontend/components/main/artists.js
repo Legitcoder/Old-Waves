@@ -9,6 +9,14 @@ class Artists extends Component{
   }
     render(){
         return(
+        <div>
+        <div className="row">
+          <div className="col-md-9 col-centered">
+            <h1>Artists</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-10 col-centered">
           <ul>
           {
               this.props.artists.map(artist =>{
@@ -16,6 +24,9 @@ class Artists extends Component{
               })
           }
           </ul>
+          </div>
+        </div>
+        </div>
           );
       }
   }

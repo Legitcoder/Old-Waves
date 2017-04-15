@@ -16,8 +16,8 @@ class MusicPlayer extends Component{
         }
         else{
         return (
-          <div>
-            <audio controls id="current" src={this.props.song.audio} />
+          <div >
+          <audio controls id="current" src={this.props.song.audio} />
           </div>
         );
         }

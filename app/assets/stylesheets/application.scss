@@ -15,7 +15,7 @@
  @import "bootstrap";
 
 html, body {
-  background-color: #373737;
+  background-color: #2e2e2e;
   color: #999;
 }
 
@@ -24,13 +24,17 @@ html, body {
     margin: 0 auto;
 }
 
+.mySearch{
+  float: right;
+}
+
 audio {
   position: fixed;
   bottom: 0;
   width: 75%;
 }
 
-h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   color: white;
 }
 
@@ -61,6 +65,10 @@ ul {
   margin: 20px;
 }
 
+.logout{
+  cursor: pointer;
+}
+
 
 #wrapper {
   padding-left: 250px;
@@ -71,7 +79,7 @@ ul {
   margin-left: -250px;
   left: 250px;
   width: 175px;
-  background: #CCCCCC;
+  background: #171717;
   position: fixed;
   height: 100%;
   overflow-y: auto;

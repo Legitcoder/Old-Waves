@@ -6,13 +6,24 @@ import {fetchArtist} from '../../actions/index';
 class ArtistAlbums extends Component{
   render(){
       return(
-        <ul>
-        {
-            this.props.artist.albums.map(album =>{
-              return(<Album album={album} key={album.id} />);
-            })
-        }
-        </ul>
+        <div>
+        <div className="row">
+          <div className="col-md-9 col-centered">
+            <h1>Albums</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-10 col-centered">
+            <ul>
+            {
+                this.props.artist.albums.map(album =>{
+                  return(<Album album={album} key={album.id} />);
+                })
+            }
+          </ul>
+          </div>
+        </div>
+        </div>
         );
     }
 }
