@@ -16,8 +16,19 @@ class MusicPlayer extends Component{
         }
         else{
         return (
-          <div >
-          <audio controls id="current" src={this.props.song.audio} />
+          <div id="audio-wrapper">
+          <audio id="current" src={this.props.song.audio} />
+          <nav id="audio-nav">
+            <div id="defaultBar">
+              <div id="progressBar"></div>
+            </div>
+              <div id="buttons">
+                <button type="button" id="playButton"></button>
+                <button type="button" id="muteButton"></button>
+                <span id="currentTime">0:00</span>
+                /<span id="fullDuration">0:00</span>
+              </div>
+          </nav>
           </div>
         );
         }

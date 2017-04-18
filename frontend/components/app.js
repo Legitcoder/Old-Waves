@@ -9,13 +9,13 @@ export default class App extends Component {
     <div className="container-fluid">
         <NavBar />
     <div className="row">
-      <div className="col-md-12 col-centered player">
+      <div className="col-md-12 col-centered">
         <SearchBar />
       </div>
     </div>
           {this.props.children}
       <div className="row">
-        <div className="col-md-10 col-centered player">
+        <div className="col-md-10 col-centered">
           <MusicPlayer />
         </div>
       </div>

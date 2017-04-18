@@ -29,13 +29,65 @@ html, body {
 }
 
 audio {
-  position: fixed;
-  bottom: 0;
-  width: 75%;
+}
+
+#audio-wrapper {
+  width: 640px;
+  margin: 10px auto;
+}
+
+#audio-nav {
+  background-color:rgb(250, 250, 250);
+  width: 640px;
+}
+
+#defaultBar {
+  width: 640px;
+  position: relative;
+  background-color: #606060;
+  height: 5px;
+}
+
+#progressBar {
+  position: absolute;
+  height: 5px;
+  background-color: #3498db;
+  width: 0px;
+}
+
+#playButton {
+  background-color:rgb(250, 250, 250);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url("play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+#muteButton {
+  background-color:rgb(250, 250, 250);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url("mutebutton.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+#muteButton:active, #playButton:active {
+  position: relative;
+  top: 2px;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
 }
 
 h1, h2, h3, h4, h5 {
-  color: white;
+  color: #ffffff ;
 }
 
 ul {
