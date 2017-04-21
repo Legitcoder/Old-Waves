@@ -15,7 +15,7 @@
  @import "bootstrap";
 
 html, body {
-  background-color: #2e2e2e;
+  background: #171717;
   color: #999;
 }
 
@@ -26,33 +26,42 @@ html, body {
 
 .mySearch{
   float: right;
+  border-radius: 15px;
+  border: 1px #000 solid;
+  padding: 5px 5px 5px 25px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  outline: none;
 }
 
-audio {
-}
 
-#audio-wrapper {
-  width: 640px;
-  margin: 10px auto;
-}
+#audio-wrapper {}
 
 #audio-nav {
   background-color:rgb(250, 250, 250);
-  width: 640px;
+  width: 1900px;
 }
 
 #defaultBar {
-  width: 640px;
+  width: 100%;
   position: relative;
   background-color: #606060;
   height: 5px;
 }
 
+.player{
+  position:fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+
 #progressBar {
   position: absolute;
   height: 5px;
   background-color: #3498db;
-  width: 0px;
+  width: 90%;
 }
 
 #playButton {
@@ -61,6 +70,17 @@ audio {
   height: 32px;
   width: 32px;
   background-image: url("play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+#pauseButton {
+  background-color:rgb(250, 250, 250);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url("pause.svg");
   background-repeat: no-repeat;
   background-position: center;
   outline: none;
@@ -108,14 +128,41 @@ ul {
 }
 
 .song-list{
-  display: block;
+  border-top: 1px solid #ffffff;
+  border-collapse: collapse;
+  width: 75%;
+  border: 1;
 }
+
+td{
+  padding: 7px;
+  color: #ffffff;
+}
+
+.playButton-td {
+  background: #ffffff url("play.svg") center no-repeat;
+  width: 20px;
+  height: 1.5em;
+  margin-top: .5em;
+  background-size: 10px 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-row {
+  border-bottom: 1px solid #ffffff;
+}​
+
 
 .artists{
   cursor: pointer;
   display: inline-block;
   margin: 20px;
 }
+
+
 
 .logout{
   cursor: pointer;
@@ -131,7 +178,7 @@ ul {
   margin-left: -250px;
   left: 250px;
   width: 175px;
-  background: #171717;
+  background-color: #2e2e2e;
   position: fixed;
   height: 100%;
   overflow-y: auto;

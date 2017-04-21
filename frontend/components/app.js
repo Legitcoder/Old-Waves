@@ -14,7 +14,7 @@ export default class App extends Component {
       </div>
     </div>
           {this.props.children}
-      <div className="row">
+      <div className="row player">
         <div className="col-md-10 col-centered">
           <MusicPlayer />
         </div>

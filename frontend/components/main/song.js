@@ -9,15 +9,30 @@ class Song extends Component{
   playPause(){
     this.props.selectSong(this.props.song);
     var song = document.getElementById('current');
-    !song.paused && !song.ended ? song.pause() : song.play();
+    var pauseButton = document.getElementById('pauseButton');
+    var playButton = document.getElementById('playButton');
+    if(!song.paused && !song.ended){
+      song.pause();
+      song.onplay = () => pauseButton.setAttribute('id', 'pauseButton');
+      song.paused ? pauseButton.setAttribute('id', 'playButton') : '';
+
+    }
+    else {
+      playButton ? playButton.setAttribute('id', 'pauseButton') : pauseButton.setAttribute('id', 'playButton');
+      setTimeout(function () {
+        song.play();
+      }, 75);
+    }
   }
 
   render(){
     const {song} = this.props;
     return(
-        <li className="songs">
-          <h4 onClick={this.playPause.bind(this)}>{song.title} {song.length}</h4>
-        </li>
+          <tr className="table-row">
+           <td className="playButton-td"  onClick={this.playPause.bind(this)}></td>
+           <td width="95%">{song.title}</td>
+           <td width="1%">{song.length}</td>
+           </tr>
     );
   }
 }

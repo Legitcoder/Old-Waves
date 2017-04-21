@@ -10,13 +10,19 @@ import Song from './song';
   render(){
     const {album} = this.props;
       return(
-        <ul className="song-list">
+      <div className="row">
+          <div className="col-md-12 col-centered">
+            <table className="song-list col-centered">
+            <tbody className="songs">
         {
             album.songs.map(song =>{
               return(<Song song={song} key={song.id} />);
             })
         }
-        </ul>
+            </tbody>
+            </table>
+          </div>
+        </div>
         );
 
     }
