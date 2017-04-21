@@ -16,12 +16,12 @@ import {fetchArtist} from '../../actions/index'
   render(){
     const {artist} = this.props;
     return(
-      <div>
+
         <li className="artists">
           <img src={artist.small_image} onClick={this.routeToArtistAlbums.bind(this)}></img>
           <h4>{artist.name}</h4>
         </li>
-      </div>
+
     );
   }
 }

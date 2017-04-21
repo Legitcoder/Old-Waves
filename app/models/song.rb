@@ -3,7 +3,7 @@ class Song < ApplicationRecord
   has_attached_file :audio
   before_save :extract_metadata
   has_attached_file :image
-  has_attached_file :image, styles: { small: "50x50>" },
+  has_attached_file :image, styles: { small: "100x100>" },
                         default_url: "missingalbumart.jpeg"
   validates_attachment_content_type :audio,
   :content_type => ['audio/mpeg',
@@ -15,8 +15,6 @@ class Song < ApplicationRecord
                      'audio/mpg',
                      'audio/x-mpg',
                      'audio/x-mpegaudio']
-  validates_attachment_size :audio, less_than: 10.megabyte
-
   def length
     seconds = self.duration
     minutes = (seconds/60).floor

@@ -6,7 +6,7 @@ export default class SearchBar extends Component{
     render(){
         return(
           <div>
-            <input type="search" className="mySearch" placeholder="Search" size="28" />
+            <input type="search" className="mySearch" placeholder="Search" size="25" />
           </div>
           );
       }

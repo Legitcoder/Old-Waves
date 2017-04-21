@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
     <div className="container-fluid">
-        <NavBar />
+    <NavBar />
     <div className="row">
       <div className="col-md-12 col-centered">
         <SearchBar />
@@ -15,7 +15,7 @@ export default class App extends Component {
     </div>
           {this.props.children}
       <div className="row player">
-        <div className="col-md-10 col-centered">
+        <div className="col-md-12">
           <MusicPlayer />
         </div>
       </div>
