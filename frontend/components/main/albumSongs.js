@@ -10,9 +10,8 @@ import Song from './song';
   render(){
     const {album} = this.props;
       return(
-      <div className="row">
-          <div className="col-md-12 col-centered">
-            <table className="song-list col-centered">
+          <div >
+            <table className="song-list">
             <tbody className="songs">
         {
             album.songs.map(song =>{
@@ -22,7 +21,6 @@ import Song from './song';
             </tbody>
             </table>
           </div>
-        </div>
         );
 
     }

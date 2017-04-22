@@ -14,9 +14,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-html, body {
-  background: #171717;
-  color: #999;
+body {
+  background: green;
 }
 
 .col-centered{
@@ -24,21 +23,25 @@ html, body {
     margin: 0 auto;
 }
 
-.mySearch{
+.search-wrapper{
+  position: fixed;
+  background-color: pink;
   float: right;
+}
+
+.mySearch{
   border-radius: 15px;
   border: 1px #000 solid;
   padding: 5px 5px 5px 25px;
-  top: 0;
-  left: 0;
-  z-index: 5;
   outline: none;
 }
 
 #audio-wrapper {
+  position: absolute;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  bottom: -150px;
 }
 
 #audio-nav {
@@ -53,12 +56,6 @@ html, body {
   position: relative;
   background-color: #606060;
   height: 5px;
-}
-
-.player{
-  position:fixed;
-  bottom: 0px;
-  width: 100%;
 }
 
 
@@ -116,17 +113,16 @@ h1, h2, h3, h4, h5 {
 }
 
 ul {
-  margin-left: 5px;
+  position: relative;
   list-style-type: none;
   text-align: center;
   display: inline-block;
  }
 
  .artists{
-   position: relative;
-   cursor: pointer;
    display: inline-block;
-   margin: 20px;
+   cursor: pointer;
+   margin: 5px;
  }
 
 
@@ -136,6 +132,12 @@ ul {
   margin: 20px;
 }
 
+.a{
+  background-color: orange;
+  overflow: scroll;
+  margin: 0 auto;
+  bottom: 0;
+}
 
 .songs{
   cursor: default;
@@ -145,7 +147,9 @@ ul {
   border-top: 1px solid #ffffff;
   border-collapse: collapse;
   width: 75%;
+  height: 100%;
   border: 1;
+  overflow: scroll;
 }
 
 td{
@@ -184,20 +188,14 @@ td{
 
 
 #wrapper {
-  padding-left: 250px;
-  transition: all 0.4s ease 0s;
+  position: fixed;
+  background-color: gray;
+  min-height: 100%;
 }
 
 #sidebar-wrapper{
-  margin-left: -250px;
-  left: 250px;
+  background-color: red;
   width: 175px;
-  background-color: #2e2e2e;
-  position: absolute;
-  height: 85.8%;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease 0s;
 }
 
 #page-content-wrapper {
@@ -205,28 +203,9 @@ td{
 }
 
 .sidebar-nav {
-  position: absolute;
   top: 0;
   width: 175px;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-@media (max-width:767px) {
-    #wrapper {
-      padding-left: 0;
-    }
-    #sidebar-wrapper {
-      left: 0;
-    }
-    #wrapper.active {
-      position: relative;
-      left: 250px;
-    }
-    #wrapper.active #sidebar-wrapper {
-      left: 250px;
-      width: 250px;
-      transition: all 0.4s ease 0s;
-    }
 }

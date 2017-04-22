@@ -20,6 +20,94 @@ lloydBanks = Artist.create(
 name: "Lloyd Banks",
 image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
 
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+lloydBanks = Artist.create(
+name: "Lloyd Banks",
+image: "http://www.crazyhood.com/wp-content/uploads/2015/04/lloydbanks2.jpg")
+
+
 theColdCorner2 = Album.create(
 title: "The Cold Corner 2",
 year: 2011,

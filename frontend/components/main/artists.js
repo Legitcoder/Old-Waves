@@ -9,10 +9,7 @@ class Artists extends Component{
   }
     render(){
         return(
-        <div>
-        <div className="row">
-          <div className="col-md-10 col-md-offset-2">
-          <h1>Artists</h1>
+          <div overflow="scroll">
           <ul>
           {
               this.props.artists.map(artist =>{
@@ -21,8 +18,6 @@ class Artists extends Component{
           }
           </ul>
           </div>
-        </div>
-        </div>
           );
       }
   }
