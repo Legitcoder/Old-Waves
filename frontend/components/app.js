@@ -6,20 +6,15 @@ import SearchBar from './main/searchBar';
 export default class App extends Component {
   render() {
     return (
-    <div className="container-fluid">
-    <NavBar />
-    <div className="row">
-      <div className="col-md-12 col-centered">
-        <SearchBar />
+      <div>
+          <NavBar />
+          <div className="custom-container">
+            <div className="a">
+              {this.props.children}
+            </div>
+                      <MusicPlayer />
+          </div>
       </div>
-    </div>
-          {this.props.children}
-      <div className="row player">
-        <div className="col-md-12">
-          <MusicPlayer />
-        </div>
-      </div>
-    </div>
     );
   }
 }
