@@ -11,7 +11,14 @@ class Song extends Component{
     var song = document.getElementById('current');
     var pauseButton = document.getElementById('pauseButton');
     var playButton = document.getElementById('playButton');
-    if(!song.paused && !song.ended){
+    if(!song){
+      var song = document.createElement('audio');
+      song.setAttribute('id', 'current');
+      debugger;
+      song.append('audio-wrapper');
+      song.play();
+    }
+    else if(song && !song.paused && !song.ended){
       song.pause();
       song.onplay = () => pauseButton.setAttribute('id', 'pauseButton');
       song.paused ? pauseButton.setAttribute('id', 'playButton') : '';

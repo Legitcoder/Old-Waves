@@ -5,10 +5,13 @@ import {fetchArtist} from '../../actions/index';
 
 class ArtistAlbums extends Component{
   render(){
-      return(
-        <div>
+          if(!this.props.artist){
+            return(<div>Loading...</div>);
+          }
+          else{
+          return(
           <div>
-          <h1>Artists</h1>
+          <h1 className="section-title">Albums</h1>
             <ul>
             {
                 this.props.artist.albums.map(album =>{
@@ -17,8 +20,8 @@ class ArtistAlbums extends Component{
             }
           </ul>
           </div>
-        </div>
         );
+      }
     }
 }
 

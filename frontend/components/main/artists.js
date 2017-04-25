@@ -9,7 +9,8 @@ class Artists extends Component{
   }
     render(){
         return(
-          <div overflow="scroll">
+          <div>
+          <h1 className="section-title">Artists</h1>
           <ul>
           {
               this.props.artists.map(artist =>{
