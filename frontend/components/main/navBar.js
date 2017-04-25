@@ -15,13 +15,10 @@ export default class NavBar extends Component{
     render(){
         return(
           <div id="wrapper">
-            <div id="sidebar-wrapper">
               <ul className="sidebar-nav">
-                <li> <Link to={"/artists"}>Music</Link> </li>
-                <li className="sidebar-brand"><a href="#">kkk</a></li>
-                <li className="logout" onClick={this.logout.bind(this)}><a>Logout</a></li>
+                <li className="sidebar-icon"> <Link to={"/artists"}>Music</Link> </li>
+                <li className="sidebar-icon" onClick={this.logout.bind(this)}><a>Logout</a></li>
               </ul>
-            </div>
           </div>
           );
       }

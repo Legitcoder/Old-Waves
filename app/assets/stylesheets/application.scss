@@ -207,14 +207,21 @@ td{
   width: 115px;
 }
 
+.sidebar-icon {
+  position: relative;
+  right: 30px;
+  margin: 10px;
+}
+
 #page-content-wrapper {
   width: 100%;
 }
 
 .sidebar-nav {
-  top: 0;
+  display: inline-block;
   width: 175px;
   list-style: none;
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
   padding: 0;
 }
