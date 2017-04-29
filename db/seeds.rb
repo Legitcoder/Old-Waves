@@ -40,6 +40,66 @@ slaughterhouse = Artist.create(
 name: "Slaughterhouse",
 image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
 
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
+slaughterhouse = Artist.create(
+name: "Slaughterhouse",
+image: "https://s-media-cache-ak0.pinimg.com/736x/79/21/0c/79210c60ac61fd978eaa6f371398e375.jpg")
+
 electronicDream = Album.create(
 title: "Electronic Dream",
 year: 2011,
@@ -51,6 +111,108 @@ title: "Golden Touch",
 album: electronicDream,
 audio: "https://s3.amazonaws.com/tidal-clone-dev/Araabmuzik+-+Electronic+Dream+/03+-+-+Araabmuzik+-+Golden+Touch.mp3",
 image: "https://s3.amazonaws.com/tidal-clone-dev/Araabmuzik+-+Electronic+Dream+/Araab_Muzik_Electronic_Dream-front-large.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
+
+forProfessionalUseOnly = Album.create(
+title: "For Professional Use Only",
+year: 2011,
+artist: araabmuzik,
+image: "http://static.djbooth.net/pics-albums/araab-forprouseonly.jpg")
 
 forProfessionalUseOnly = Album.create(
 title: "For Professional Use Only",

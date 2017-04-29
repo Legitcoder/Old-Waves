@@ -17,9 +17,8 @@
 
  body{
   background: #101010;
-  margin: 0;
-  padding: 0;
 }
+
 #root {
   background: orange;
 }
@@ -43,13 +42,15 @@
 }
 
 #audio-wrapper {
-  display: table;
-  height: 1px;
+  display: block;
   width: 100%;
+  bottom: 0;
+  position: fixed;
 }
 
 #audio-nav {
   background-color: #282828;
+  height: 140px;
   margin: 0;
   padding: 0;
 }
@@ -63,6 +64,7 @@
 
 
 #progressBar {
+  margin: 0 auto;
   position: absolute;
   height: 5px;
   background-color: #3498db;
@@ -102,9 +104,24 @@
   outline: none;
 }
 
-#muteButton:active, #playButton:active {
+#unMuteButton {
+  background-color:rgb(250, 250, 250);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url("unmute.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+#unMuteButton:active, #muteButton:active, #playButton:active {
   position: relative;
   top: 2px;
+}
+
+#currentTime, #fullDuration {
+  color: 	#FFFFFF;
 }
 
 .btn:focus,.btn:active {
@@ -119,6 +136,7 @@ ul {
   list-style-type: none;
   text-align: center;
   display: inline-block;
+  padding-right: 10px;
  }
 
  .artists{
@@ -134,34 +152,30 @@ ul {
   margin: 10px;
 }
 
-.a{
+.main-content{
   background-color: #101010;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 88%;
-}
-
-.custom-container{
-  float: right;
-  position: relative;
-  height: 950px;
-  width: 94%;
+  margin-left: 150px;
+  margin-bottom: 150px;
 }
 
 .songs{
   cursor: default;
 }
 
+.song-table-wrapper {
+  height: 100%;
+  padding: 10px;
+}
+
 .song-list{
-  position: relative;
+  overflow: scroll;
   border-top: 1px solid #ffffff;
   border-collapse: collapse;
-  width: 70%;
-  height: 50%;
-  height: 100%;
+  width: 90%;
   border: 1;
   margin: 0 auto;
-  top: 50px;
 }
 
 .section-title{
@@ -171,21 +185,25 @@ ul {
 }
 
 td{
-  padding: 7px;
+  padding: 8px;
   color: #ffffff;
 }
 
-.playButton-td {
-  background: #ffffff url("play.svg") center no-repeat;
-  width: 20px;
-  height: 1.5em;
-  margin-top: .5em;
-  background-size: 10px 10px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+tr:hover{
+  background-color: gray;
+  .playButton-td {
+    background: #ffffff url("play.svg") center no-repeat;
+    width: 20px;
+    height: 1.5em;
+    margin-top: .5em;
+    background-size: 10px 10px;
+    border-radius: 50%;
+    display: flex;
+  }
 }
+
+
+
 
 .table-row {
   border-bottom: 1px solid #ffffff;
@@ -213,13 +231,8 @@ td{
   margin: 10px;
 }
 
-#page-content-wrapper {
-  width: 100%;
-}
-
 .sidebar-nav {
-  display: inline-block;
-  width: 175px;
+  width: 150px;
   list-style: none;
   text-align: center;
   margin: 0 auto;
