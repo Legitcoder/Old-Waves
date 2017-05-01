@@ -1,5 +1,7 @@
 class Song < ApplicationRecord
   belongs_to :album
+  #delegate :artist, to: :album, allow_nil: true
+  has_one :artist, through: :album
   has_attached_file :audio
   before_save :extract_metadata
   has_attached_file :image

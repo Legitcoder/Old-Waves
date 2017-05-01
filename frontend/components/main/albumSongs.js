@@ -11,7 +11,7 @@ import Song from './song';
     const {album} = this.props;
       return(
           <div className="song-table-wrapper" >
-            <img src="https://fanart.tv/fanart/music/c0b58a7f-5615-4b22-8af4-8f16b10a0177/artistbackground/araabmuzik-5127d5562e2ff.jpg"  />
+            <img height="300px" src="https://fanart.tv/fanart/music/c0b58a7f-5615-4b22-8af4-8f16b10a0177/artistbackground/araabmuzik-5127d5562e2ff.jpg"  />
             <table className="song-list">
             <tbody className="songs">
         {

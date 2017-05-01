@@ -3,12 +3,6 @@ import {connect} from 'react-redux';
 
 class MusicPlayer extends Component{
 
-  constructor(props){
-    super(props);
-    this.state = {
-      duration: "0:00"
-    }
-  }
 
   componentWillUpdate(){
     var currentSong = document.getElementById('current');
@@ -19,11 +13,26 @@ class MusicPlayer extends Component{
 
   update(){
     var song = document.getElementById('current');
+    var progressBar = document.getElementById('progressBar');
+    var pauseButton = document.getElementById('pauseButton');
     var currentTime = document.getElementById('currentTime');
     var playedMinutes = parseInt(song.currentTime/60);
     var playedSeconds = parseInt(song.currentTime%60);
     playedSeconds < 10 ? playedSeconds = `0${playedSeconds}` : '';
-    song && !song.ended && !song.paused  ? this.setState({duration: `${playedMinutes}:${playedSeconds}`}) : currentTime = "0:00";
+    if(song && !song.ended){
+       currentTime.innerHTML = `${playedMinutes}:${playedSeconds}`;
+       var size = parseInt(song.currentTime*100/song.duration);
+       progressBar.style.width = size + "%";
+    }
+    else{
+       currentTime.innerHTML = "0:00";
+       song.pause();
+       if(pauseButton){
+         pauseButton.setAttribute('id', 'playButton')
+       }
+       progressBar.style.width = "0%";
+       window.clearInterval(window.updateTime);
+    }
   }
 
   playPause(){
@@ -56,22 +65,33 @@ class MusicPlayer extends Component{
     }
   }
 
+  clickedBar(event){
+    var song = document.getElementById('current');
+    var bar = document.getElementById('defaultBar');
+    if(!song.ended){
+      var mouseX = event.pageX - bar.offsetLeft;
+      var newTime = (mouseX*song.duration)/bar.offsetWidth;
+      song.currentTime = newTime;
+    }
+  }
+
   renderMusicPlayer(audio, image, duration){
     return (
       <div id="audio-wrapper">
       <audio id="current" src={audio} />
       <nav id="audio-nav">
-        <div id="defaultBar">
+      <button type="button" id="playButton" onClick={this.playPause.bind(this)}></button>
+        <div id="defaultBar" onClick={this.clickedBar.bind(this)}>
           <div id="progressBar"></div>
+          <span id="currentTime">0:00</span>
+          <span id="fullDuration">{duration}</span>
         </div>
-          <div id="buttons">
-            <button type="button" id="playButton" onClick={this.playPause.bind(this)}></button>
-            <button type="button" id="muteButton" onClick={this.muteOrUnmute.bind(this)}></button>
-            <span id="currentTime">{this.state.duration}/</span><span id="fullDuration">{duration}</span>
+          <div className="song-container">
+            <img className="song-image" src={image} />
+            <span className="song-title">{this.props.song.title}</span>
+            <span className="song-artist">{this.props.song.artist.name}</span>
           </div>
-          <div className="song-image">
-            <img src={image} />
-          </div>
+          <button type="button" id="muteButton" onClick={this.muteOrUnmute.bind(this)}></button>
       </nav>
       </div>
     );
@@ -79,7 +99,6 @@ class MusicPlayer extends Component{
 
   render(){
         const {song} = this.props;
-        //var updateTime = setInterval(this.update(), 500);
         if(!song){
           return this.renderMusicPlayer("", "", "0:00");
         }

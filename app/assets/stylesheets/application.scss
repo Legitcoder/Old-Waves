@@ -56,45 +56,64 @@
 }
 
 #defaultBar {
+  margin: 0 auto;
   width: 50%;
   position: relative;
+  top: 60px;
   background-color: #606060;
   height: 5px;
+  border-radius: 110px;
+  cursor: pointer;
 }
 
+#buttons{
+  background-color: green;
+  margin: 0 auto;
+  width: 3%;
+}
 
 #progressBar {
   margin: 0 auto;
   position: absolute;
   height: 5px;
   background-color: #3498db;
-  width: 10%;
+  border-radius: 110px;
 }
 
-#playButton {
-  background-color:rgb(250, 250, 250);
+#pauseButton, #playButton {
+  position: relative;
+  top: 40px;
+  display: block;
+  margin: 0 auto;
   border: none;
   height: 32px;
   width: 32px;
-  background-image: url("play.svg");
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
   outline: none;
+  border: 2px solid #000000;
+}
+
+// #pauseButton:hover, #playButton:hover {
+//   height: 43px;
+//   width: 43px;
+// }
+
+#playButton {
+  background-image: url("play.svg");
+  background-color: inherit;
 }
 
 #pauseButton {
-  background-color:rgb(250, 250, 250);
-  border: none;
-  height: 32px;
-  width: 32px;
   background-image: url("pause.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: none;
+  background-color: inherit;
 }
 
 #muteButton {
-  background-color:rgb(250, 250, 250);
+  background-color: green;
+  display: block;
+  float: right;
   border: none;
   height: 32px;
   width: 32px;
@@ -105,6 +124,7 @@
 }
 
 #unMuteButton {
+  float: right;
   background-color:rgb(250, 250, 250);
   border: none;
   height: 32px;
@@ -115,13 +135,61 @@
   outline: none;
 }
 
-#unMuteButton:active, #muteButton:active, #playButton:active {
+#playButton:active, #pauseButton:active {
   position: relative;
-  top: 2px;
+  top: 42px;
 }
 
-#currentTime, #fullDuration {
+#currentTime {
   color: 	#FFFFFF;
+  position: relative;
+  right: 45px;
+  bottom: 8px;
+}
+
+#fullDuration {
+  color: 	#FFFFFF;
+  position: relative;
+  float: right;
+  left: 45px;
+  bottom: 8px;
+}
+
+.song-container{
+  position: relative;
+  bottom: 20px;
+  width: 20%;
+  white-space: nowrap;
+}
+
+.song-image{
+  float: left;
+  margin: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+  height: 100px;
+  width: 100px;
+  display: block;
+  padding: 5px;
+}
+
+.song-title{
+  top: 20px;
+  left: 120px;
+  padding: 5px;
+  color: 	#FFFFFF;
+}
+
+.song-title, .song-artist{
+  position: absolute;
+  display: inline-block;
+}
+.song-artist{
+  top: 45px;
+  left: 120px;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 90%;
 }
 
 .btn:focus,.btn:active {
@@ -193,6 +261,15 @@ tr:hover{
   background-color: gray;
   .playButton-td {
     background: #ffffff url("play.svg") center no-repeat;
+    width: 20px;
+    height: 1.5em;
+    margin-top: .5em;
+    background-size: 10px 10px;
+    border-radius: 50%;
+    display: flex;
+  }
+  .pauseButton-td {
+    background: #ffffff url("pause.svg") center no-repeat;
     width: 20px;
     height: 1.5em;
     margin-top: .5em;
