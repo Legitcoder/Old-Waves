@@ -11,16 +11,21 @@ class MusicPlayer extends Component{
     }, 75);
   }
 
+  convertedCurrentTime(){
+    var song = document.getElementById('current');
+    var playedMinutes = parseInt(song.currentTime/60);
+    var playedSeconds = parseInt(song.currentTime%60);
+    playedSeconds < 10 ? playedSeconds = `0${playedSeconds}` : '';
+    return `${playedMinutes}:${playedSeconds}`;
+  }
+
   update(){
     var song = document.getElementById('current');
     var progressBar = document.getElementById('progressBar');
     var pauseButton = document.getElementById('pauseButton');
     var currentTime = document.getElementById('currentTime');
-    var playedMinutes = parseInt(song.currentTime/60);
-    var playedSeconds = parseInt(song.currentTime%60);
-    playedSeconds < 10 ? playedSeconds = `0${playedSeconds}` : '';
     if(song && !song.ended){
-       currentTime.innerHTML = `${playedMinutes}:${playedSeconds}`;
+       currentTime.innerHTML = this.convertedCurrentTime();
        var size = parseInt(song.currentTime*100/song.duration);
        progressBar.style.width = size + "%";
     }
@@ -68,10 +73,14 @@ class MusicPlayer extends Component{
   clickedBar(event){
     var song = document.getElementById('current');
     var bar = document.getElementById('defaultBar');
+    var progressBar = document.getElementById('progressBar');
+    var currentTime = document.getElementById('currentTime');
     if(!song.ended){
       var mouseX = event.pageX - bar.offsetLeft;
       var newTime = (mouseX*song.duration)/bar.offsetWidth;
       song.currentTime = newTime;
+      currentTime.innerHTML = this.convertedCurrentTime();
+      progressBar.style.width = mouseX + "px";
     }
   }
 
