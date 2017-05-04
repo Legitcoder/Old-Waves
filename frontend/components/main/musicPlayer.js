@@ -3,6 +3,13 @@ import {connect} from 'react-redux';
 
 class MusicPlayer extends Component{
 
+  constructor(props){
+    super(props);
+    this.state = {
+      volume: "100"
+    }
+  }
+
 
   componentWillUpdate(){
     var currentSong = document.getElementById('current');
@@ -56,6 +63,15 @@ class MusicPlayer extends Component{
     }
   }
 
+  setVolume(event){
+    var song = document.getElementById('current');
+    var mute = document.getElementById('muteButton');
+    var playButton = document.getElementById('playButton');
+    var volumeSlider = document.getElementById('volumeSlider');
+    song.volume = volumeSlider.value/100;
+    this.setState({volume: volumeSlider.value});
+  }
+
   muteOrUnmute(){
     var song = document.getElementById('current');
     var mute = document.getElementById('muteButton');
@@ -84,23 +100,39 @@ class MusicPlayer extends Component{
     }
   }
 
-  renderMusicPlayer(audio, image, duration){
+  renderImage(image){
+    if(image !== ""){
+      return <img className="song-image" src={image} />
+    }
+    else{
+      return <div></div>
+    }
+  }
+
+  renderMusicPlayer(audio, image, duration, songTitle, artistName){
     return (
       <div id="audio-wrapper">
       <audio id="current" src={audio} />
       <nav id="audio-nav">
-      <button type="button" id="playButton" onClick={this.playPause.bind(this)}></button>
+      <ul id="controlButtons">
+      <li id="controlButton"><button type="button" id="leftButton"></button></li>
+      <li id="controlButton"><button type="button" id="playButton" onClick={this.playPause.bind(this)}></button></li>
+      <li id="controlButton"><button type="button" id="rightButton"></button></li>
+      </ul>
         <div id="defaultBar" onClick={this.clickedBar.bind(this)}>
           <div id="progressBar"></div>
           <span id="currentTime">0:00</span>
           <span id="fullDuration">{duration}</span>
         </div>
           <div className="song-container">
-            <img className="song-image" src={image} />
-            <span className="song-title">{this.props.song.title}</span>
-            <span className="song-artist">{this.props.song.artist.name}</span>
+            {this.renderImage(image)};
+            <span className="song-title">{songTitle}</span>
+            <span className="song-artist">{artistName}</span>
           </div>
-          <button type="button" id="muteButton" onClick={this.muteOrUnmute.bind(this)}></button>
+          <div id="volumeAndMuteControls">
+            <button type="button" id="muteButton" onClick={this.muteOrUnmute.bind(this)}></button>
+            <input id="volumeSlider" type="range" min="0" max="100" value={this.state.volume} step="1" onChange={this.setVolume.bind(this)} />
+          </div>
       </nav>
       </div>
     );
@@ -109,10 +141,10 @@ class MusicPlayer extends Component{
   render(){
         const {song} = this.props;
         if(!song){
-          return this.renderMusicPlayer("", "", "0:00");
+          return this.renderMusicPlayer("", "", "0:00", "", "");
         }
         else{
-          return this.renderMusicPlayer(song.audio, song.small_image, song.length);
+          return this.renderMusicPlayer(song.audio, song.small_image, song.length, song.title, song.artist.name);
         }
     }
 }
