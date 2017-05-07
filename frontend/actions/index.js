@@ -10,7 +10,7 @@ import {
 } from './types'
 
 export const authorizeUserLogin = (props) => dispatch => {
-  axios.post('/api/sessions', props)
+  return axios.post('/api/sessions', props)
   .then(currentUser => {
     dispatch({ type: AUTHORIZE_USER_LOGIN, payload: currentUser.data})
     hashHistory.push('/');

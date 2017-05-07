@@ -10,6 +10,7 @@ class Login extends Component {
 
     this.state = {
       displaySignupForm: false,
+      displayLoginError: false,
       username: "",
       password: ""
     }
@@ -18,17 +19,26 @@ class Login extends Component {
   handleSubmit(event){
     event.preventDefault();
     const {username, password} = this.refs;
-    this.setState({
+    if(
+      this.setState({
       username: username.value,
       password: password.value
-    }, () => this.props.authorizeUserLogin(this.state)
-  );
+      }, () => this.props.authorizeUserLogin(this.state)
+      )
+    )
+    {
+      this.setState({displayLoginError: false});
+    }
+    else
+    {
+      this.setState({displayLoginError: true});
+    }
   }
 
   renderAlert(){
-    if (this.props.errorMessage) {
+    if (this.props.errorMessage && this.state.displayLoginError) {
       return (
-        <div className="alert alert-danger">
+        <div className="login-error alert alert-danger">
           {this.props.errorMessage}
         </div>
         )

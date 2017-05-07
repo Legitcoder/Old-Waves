@@ -16,7 +16,6 @@ import {fetchArtist} from '../../actions/index'
   render(){
     const {artist} = this.props;
     return(
-
         <li className="artists">
           <img src={artist.small_image} onClick={this.routeToArtistAlbums.bind(this)}></img>
           <h5>{artist.name}</h5>

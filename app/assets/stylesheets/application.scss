@@ -148,7 +148,6 @@ body, #root{
 
 #volumeSlider{
   position: relative;
-  background-color: #3498db;
   display: inline;
   border: none;
   height: 32px;
@@ -191,6 +190,38 @@ body, #root{
   float: right;
   left: 45px;
   bottom: 8px;
+}
+
+.artist-header{
+  height: 300px;
+  overflow: hidden;
+}
+
+.artist-header-image{
+  background-size: cover;
+  transform: scale(2,2);
+  filter: blur(7px);
+  width: 100%;
+  height: 100%;
+}
+
+.artist-header-name{
+  position: absolute;
+  top: 175px;
+  left: 5%;
+  font-size: 75px;
+  text-shadow: 3px 3px #000000;
+  margin-left: 180px;
+}
+
+.artist-circle-image{
+  position: absolute;
+  left: 5%;
+  top: 40px;
+  margin-left: 180px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .song-container{
@@ -275,7 +306,7 @@ ul {
 
 .song-table-wrapper {
   height: 100%;
-  padding: 10px;
+  margin: 80px;
 }
 
 .song-list{
@@ -298,33 +329,58 @@ td{
   color: #ffffff;
 }
 
+// .play-tooltip{
+//   background-color: white;
+//   color: gray;
+//   padding: 4px;
+//   position: relative;
+//   top: 10px;
+//   right: 40px;
+//   visibility: hidden;
+//   z-index: 1;
+// }
+//
+// .playButton-td:hover{
+//   .play-tooltip{
+//     visibility: visible;
+//   }
+// }
+// <span className="play-tooltip">Play</span>
+
+.song-title-td{
+  width: 94.5%;
+}
+
+
 tr:hover{
   background-color: gray;
-  .playButton-td {
+
+  #playButton-td {
     background: #ffffff url("play.svg") center no-repeat;
     width: 20px;
     height: 1.5em;
     margin-top: .5em;
+    margin-left: .5em;
     background-size: 10px 10px;
     border-radius: 50%;
     display: flex;
+    z-index: -1;
   }
-  .pauseButton-td {
+  #pauseButton-td {
     background: #ffffff url("pause.svg") center no-repeat;
     width: 20px;
     height: 1.5em;
     margin-top: .5em;
+    margin-left: .5em;
     background-size: 10px 10px;
     border-radius: 50%;
     display: flex;
   }
 }
 
-
-
-
 .table-row {
   border-bottom: 1px solid #ffffff;
+  z-index: -1;
 }​
 
 .logout{

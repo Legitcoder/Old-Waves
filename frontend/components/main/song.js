@@ -12,6 +12,7 @@ class Song extends Component{
     var song = document.getElementById('current');
     var pauseButton = document.getElementById('pauseButton');
     var playButton = document.getElementById('playButton');
+    var playButtonTd = document.getElementById('playButton-td');
 
     if(song && !song.paused && !song.ended){
       song.pause();
@@ -57,11 +58,17 @@ class Song extends Component{
   render(){
     const {song} = this.props;
     return(
+        <div className="song-list-container">
+          <table className="song-list">
+          <tbody className="songs">
           <tr className="table-row">
-           <td className="playButton-td"  onClick={this.playPause.bind(this)}></td>
-           <td width="95.5%">{song.title}</td>
+           <td id="playButton-td"  onClick={this.playPause.bind(this)}></td>
+           <td className="song-title-td">{song.title}</td>
            <td width="1%">{song.length}</td>
            </tr>
+           </tbody>
+           </table>
+        </div>
     );
   }
 }
