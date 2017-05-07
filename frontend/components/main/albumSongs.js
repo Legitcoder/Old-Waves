@@ -11,7 +11,7 @@ import ArtistHeader from './ArtistHeader'
   render(){
     const {album} = this.props;
       return(
-        <div>
+        <div overflow="scroll">
           <ArtistHeader />
           <div className="song-table-wrapper" >
         {

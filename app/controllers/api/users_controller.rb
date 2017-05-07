@@ -11,7 +11,6 @@ class Api::UsersController < ApplicationController
   #User Signup
   def create
     @user = User.new(user_params)
-    debugger
     if @user.save
       render "api/users/show"
     else

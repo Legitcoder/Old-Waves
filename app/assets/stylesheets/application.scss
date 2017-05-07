@@ -224,6 +224,10 @@ body, #root{
   border-radius: 50%;
 }
 
+.song-list-container{
+  overflow: scroll;
+}
+
 .song-container{
   position: relative;
   bottom: 20px;
@@ -294,14 +298,14 @@ ul {
 
 .main-content{
   background-color: #101010;
-  overflow-y: scroll;
-  overflow-x: hidden;
   margin-left: 150px;
   margin-bottom: 150px;
+  overflow-x: hidden;
 }
 
 .songs{
   cursor: default;
+  overflow: scroll;
 }
 
 .song-table-wrapper {
@@ -310,7 +314,6 @@ ul {
 }
 
 .song-list{
-  overflow: scroll;
   border-top: 1px solid #ffffff;
   border-collapse: collapse;
   width: 90%;
