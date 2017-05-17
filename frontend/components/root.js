@@ -12,6 +12,8 @@ import AlbumSongs from './main/albumSongs';
 import Login from './auth/login';
 import Artists from './main/artists';
 import ArtistAlbums from './main/artistAlbums';
+import Users from './main/Users';
+import User from './main/User';
 
 
 const persistedState = loadState();
@@ -35,7 +37,9 @@ const Root = () => {
       <Route path="/" component={App}>
         <IndexRoute component={Artists} onEnter={requireAuth} />
         <Route path="/artists" component={Artists} />
+        <Route path="/users" component={Users} />
         <Route path="/artists/:id/:artist" component={ArtistAlbums} />
+        <Route path="/users/:id/:user" component={User} />
         <Route path="/artists/:id/:artist/:album" component={AlbumSongs} />
       </Route>
       <Route path="/login" component={Login} />

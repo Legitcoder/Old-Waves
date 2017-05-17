@@ -4,3 +4,4 @@ export const FETCH_ARTISTS = 'FETCH_ARTISTS';
 export const FETCH_ARTIST = 'FETCH_ARTIST';
 export const SELECT_ALBUM = 'SELECT_ALBUM';
 export const SELECT_SONG = 'SELECT_SONG';
+export const FETCH_USERS ='FETCH_USERS';

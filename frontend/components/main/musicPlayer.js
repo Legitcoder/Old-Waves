@@ -109,15 +109,17 @@ class MusicPlayer extends Component{
     }
   }
 
+
+
   renderMusicPlayer(audio, image, duration, songTitle, artistName){
     return (
       <div id="audio-wrapper">
       <audio id="current" src={audio} />
       <nav id="audio-nav">
       <ul id="controlButtons">
-      <li id="controlButton"><button type="button" id="leftButton"></button></li>
-      <li id="controlButton"><button type="button" id="playButton" onClick={this.playPause.bind(this)}></button></li>
-      <li id="controlButton"><button type="button" id="rightButton"></button></li>
+        <li id="controlButton"><button type="button" id="leftButton"></button></li>
+        <li id="controlButton"><button type="button" id="playButton" onClick={this.playPause.bind(this)}></button></li>
+        <li id="controlButton"><button type="button" id="rightButton"></button></li>
       </ul>
         <div id="defaultBar" onClick={this.clickedBar.bind(this)}>
           <div id="progressBar"></div>
