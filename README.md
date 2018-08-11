@@ -1,3 +1,3 @@
 # Old Waves
 
-Abandoned Spotify Clone. 
+Unfinished Abandoned Spotify Clone. 
